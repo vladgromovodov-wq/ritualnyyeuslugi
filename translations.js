@@ -112,9 +112,7 @@
       }
   };
 function setLanguage(lang) {
-    // Сохраняем выбор в браузере
     localStorage.setItem('selectedLang', lang);
-
     document.querySelectorAll('[data-lang]').forEach(element => {
         const key = element.getAttribute('data-lang');
         if (translations[lang][key]) {
@@ -122,8 +120,6 @@ function setLanguage(lang) {
         }
     });
 }
-
-// При загрузке страницы проверяем сохраненный язык
 window.onload = () => {
     const savedLang = localStorage.getItem('selectedLang') || 'ru';
     setLanguage(savedLang);

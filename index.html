@@ -2,146 +2,217 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
     <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ритуальная услуги </title>
-  </head>
+    <title data-lang="site-title">Ритуальная служба</title>
+</head>
 <body>
 
+<div class="lang-switch">
+    <button onclick="setLanguage('ru')">RU</button>
+    <button onclick="setLanguage('os')">ИРОН</button>
+    <button onclick="setLanguage('en')">EN</button>
+</div>
+
 <header>
-    <h1>Ритуальные услуги</h1>
-    <p>Профессиональная помощь в трудную минуту</p>
+    <h1 data-lang="site-title">Ритуальные Услуги</h1>
+    <p data-lang="site-subtitle">Профессиональная помощь в трудную минуту</p>
 </header>
+
 <nav>
-    <a href="#about">О нас</a>
-    <a href="#info">Информация</a>
-    <a href="#assortment">Ассортимент</a>
-    <a href="#services">Галерея</a>
-    <a href="#map">Контакты</a>
+    <a href="#about" data-lang="nav-about">О нас</a>
+    <a href="#info" data-lang="nav-info">Информация</a>
+    <a href="#assortment" data-lang="nav-assortment">Ассортимент</a>
+    <a href="#services" data-lang="nav-gallery">Галерея</a>
+    <a href="#map" data-lang="nav-map">Контакты</a>
 </nav>
+
 <div class="container">
     <section id="about">
-        <h2>О нашей службе</h2>
+        <h2 data-lang="about-title">О нашей службе</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Мы работаем, чтобы обеспечить достойные проводы ваших близких. Наша служба берет на себя все организационные вопросы, гарантируя деликатный подход и внимание к деталям.</p>
+                <p data-lang="about-p1">Мы работаем, чтобы обеспечить достойные проводы ваших близких. Наша служба берет на себя все организационные вопросы, гарантируя деликатный подход и внимание к деталям.</p>
             </div>
             <div class="about-stats">
-                <div class="stat-item"><span class="stat-number">15 лет</span><span class="stat-desc">опыта работы</span></div>
-                <div class="stat-item"><span class="stat-number">24/7</span><span class="stat-desc">Работаем</span></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-lang="stat-years">15 лет</span>
+                    <span class="stat-desc" data-lang="stat-exp">опыта работы</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-lang="stat-247">24/7</span>
+                    <span class="stat-desc" data-lang="stat-work">Работаем</span>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="info">
-        <h2>Полезная информация, что делать если умер человек.</h2>
+        <h2 data-lang="info-title">Полезная информация</h2>
         <div class="info-grid">
             <div class="info-card">
-              <ol>
-                  <li><b>Дома в дневное время:</b> Вызвать участкового врача для констатации смерти и полицию.</li>
-                  <li><b>Дома в ночное время:</b> Вызвать скорую помощь и полицию.</li>
-                  <li><b>В больнице:</b> Лечащий врач или дежурный персонал сообщат родственникам и направят тело в морг.</li>
-                  <li>Вызвать специализированную службу перевозки тел.</li>
-              </ol>
-              </div>
-              <div class="info-card">
-              <h3>Документы для похорон</h3>
-              <ul>
-                  <li>Бланк констатации смерти (от врача).</li>
-                  <li>Протокол осмотра тела (от полиции).</li>
-                  <li>Медицинское свидетельство о смерти (выдается в морге).</li>
-                  <li>Гербовое свидетельство о смерти (выдается в ЗАГСе или МФЦ).</li>
-                  <li>Паспорт заявителя (родственника или ответственного лица).</li>
-              </ul>
-              </div>
-              </div>
-              </section>
-              <section id="assortment">
-          <h2>Ассортимент и цены</h2>
-          <div class="product-grid">
-              <div class="product-card">
-                  <div class="product-img">Гробы</div>
-                  <img src="ass3.png" alt="Гроб деревянный лакированный">
-                  <div class="product-info"><h3>Гроб деревянный</h3><p>Лакированный, сосна</p><div class="product-price">от 15 000 ₽</div></div>
-              </div>
-              <div class="product-card">
-                  <div class="product-img">Венки</div>
-                  <img src="ass2.png" alt="Гроб деревянный лакированный">
-                  <div class="product-info"><h3>Венок элитный</h3><p>Искусственные цветы</p><div class="product-price">от 3 500 ₽</div></div>
+                <ol>
+                    <li data-lang="info-home-day"><b>Дома в дневное время:</b> Вызвать участкового врача для констатации смерти и полицию.</li>
+                    <li data-lang="info-home-night"><b>Дома в ночное время:</b> Вызвать скорую помощь и полицию.</li>
+                    <li data-lang="info-hospital"><b>В больнице:</b> Лечащий врач или дежурный персонал сообщат родственникам и направят тело в морг.</li>
+                    <li data-lang="info-transport">Вызвать специализированную службу перевозки тел.</li>
+                </ol>
+            </div>
+            <div class="info-card">
+                <h3 data-lang="docs-title">Документы для похорон</h3>
+                <ul>
+                    <li data-lang="doc-1">Бланк констатации смерти (от врача).</li>
+                    <li data-lang="doc-2">Протокол осмотра тела (от полиции).</li>
+                    <li data-lang="doc-3">Медицинское свидетельство о смерти (выдается в морге).</li>
+                    <li data-lang="doc-4">Гербовое свидетельство о смерти (выдается в ЗАГСе или МФЦ).</li>
+                    <li data-lang="doc-5">Паспорт заявителя (родственника или ответственного лица).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="assortment">
+        <h2 data-lang="assort-title">Ассортимент и цены</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img">Гробы</div>
+                <img src="ass3.png" alt="Гроб">
+                <div class="product-info">
+                    <h3 data-lang="item-1">Ритуальные принадлежности</h3>
+                    <p>Лакированный, сосна</p>
+                    <div class="product-price">от 15 000 ₽</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Венки</div>
+                <img src="ass2.png" alt="Венок">
+                <div class="product-info">
+                    <h3 data-lang="item-3">Венки</h3>
+                    <p>Искусственные цветы</p>
+                    <div class="product-price">от 3 500 ₽</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Памятники</div>
+                <img src="ass4.png" alt="Памятник">
+                <div class="product-info">
+                    <h3>Памятник</h3>
+                    <p>Гранит, стандарт</p>
+                    <div class="product-price">от 25 000 ₽</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Услуги</div>
+                <img src="ass2.png" alt="Катафалк">
+                <div class="product-info">
+                    <h3 data-lang="item-2">Транспортные услуги</h3>
+                    <p>Mercedes/Ford</p>
+                    <div class="product-price">от 10 000 ₽</div>
+                </div>
               </div>
               <div class="product-card">
                   <div class="product-img">Памятники</div>
-                    <img src="ass4.png" alt="Гроб деревянный лакированный">
-                  <div class="product-info"><h3>Памятник</h3><p>Гранит, стандарт</p><div class="product-price">от 25 000 ₽</div></div>
-              </div>
-              <div class="product-card">
-                  <div class="product-img">Кресты</div>
-                    <img src="ass1.png" alt="Гроб деревянный лакированный">
-                  <div class="product-info"><h3>Крест дубовый</h3><p>Резной, с распятием</p><div class="product-price">от 8 000 ₽</div></div>
-              </div>
-              <div class="product-card">
-                  <div class="product-img">Текстиль</div>
-                    <img src="ass6.png" alt="Гроб деревянный лакированный">
-                  <div class="product-info"><h3>Комплект в гроб</h3><p>Атлас, кружево</p><div class="product-price">от 2 500 ₽</div></div>
+                  <img src="ass4.png" alt="Памятник">
+                  <div class="product-info">
+                      <h3>Памятник</h3>
+                      <p>Гранит, стандарт</p>
+                      <div class="product-price">от 25 000 ₽</div>
+                  </div>
               </div>
               <div class="product-card">
                   <div class="product-img">Услуги</div>
-                    <img src="ass2.png" alt="Гроб деревянный лакированный">
-                  <div class="product-info"><h3>Катафалк</h3><p>Mercedes/Ford</p><div class="product-price">от 10 000 ₽</div></div>
-              </div>
-              <div class="product-card">
-                  <div class="product-img">Услуги</div>
-                    <img src="ass2.png" alt="Гроб деревянный лакированный">
-                  <div class="product-info"><h3>Катафалк</h3><p>Mercedes/Ford</p><div class="product-price">от 10 000 ₽</div></div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">Услуги</div>
-                      <img src="ass2.png" alt="Гроб деревянный лакированный">
-                    <div class="product-info"><h3>Катафалк</h3><p>Mercedes/Ford</p><div class="product-price">от 10 000 ₽</div></div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">Услуги</div>
-                      <img src="ass2.png" alt="Гроб деревянный лакированный">
-                    <div class="product-info"><h3>Катафалк</h3><p>Mercedes/Ford</p><div class="product-price">от 10 000 ₽</div></div>
-                </div>
+                  <img src="ass2.png" alt="Катафалк">
+                  <div class="product-info">
+                      <h3 data-lang="item-2">Транспортные услуги</h3>
+                      <p>Mercedes/Ford</p>
+                      <div class="product-price">от 10 000 ₽</div>
+                  </div>
           </div>
-              </section>
-              <div class="product-card custom-order">
-    <div class="product-img">
+                <div class="product-card">
+                    <div class="product-img">Услуги</div>
+                    <img src="ass2.png" alt="Катафалк">
+                    <div class="product-info">
+                        <h3 data-lang="item-2">Транспортные услуги</h3>
+                        <p>Mercedes/Ford</p>
+                        <div class="product-price">от 10 000 ₽</div>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                      <div class="product-img">Памятники</div>
+                      <img src="ass4.png" alt="Памятник">
+                      <div class="product-info">
+                          <h3>Памятник</h3>
+                          <p>Гранит, стандарт</p>
+                          <div class="product-price">от 25 000 ₽</div>
+                      </div>
+                  </div>
+                  <div class="product-card">
+                      <div class="product-img">Услуги</div>
+                      <img src="ass2.png" alt="Катафалк">
+                      <div class="product-info">
+                          <h3 data-lang="item-2">Транспортные услуги</h3>
+                          <p>Mercedes/Ford</p>
+                          <div class="product-price">от 10 000 ₽</div>
+                      </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="product-card custom-order">
+        <div class="product-img">
             <img src="ass2.png" alt="Изготовление горшков на заказ">
+        </div>
+        <div class="product-info">
+            <div class="badge" data-lang="custom-order">Индивидуальный заказ</div>
+            <h3 data-lang="pots-title">Цветочные горшки</h3>
+            <p data-lang="pots-desc">Изготовление по вашим размерам, выбор цвета и формы.</p>
+            <div class="product-price" data-lang="price-agreed">Цена договорная</div>
+        </div>
     </div>
-    <div class="product-info">
-        <div class="badge">Индивидуальный заказ</div>
-        <h3>Цветочные горшки</h3>
-        <p>Изготовление по вашим размерам, выбор цвета и формы.</p>
-         <p>Для заказа напишите нам в Whatsapp +7 (XXX) XXX-XX-XX.</p>
-        <div class="product-price">Цена договорная</div>
-    </div>
-</div>
+
     <section id="services">
-        <h2>Услуги</h2>
+        <h2 data-lang="services">Услуги</h2>
         <div class="services">
-            <div class="services-item">Ритуальные принадлежности</div>
-            <div class="services-item">Транспортные услуги</div>
-            <div class="services-item">Венки</div>
+            <div class="services-item" data-lang="item-1">Ритуальные принадлежности</div>
+            <div class="services-item" data-lang="item-2">Транспортные услуги</div>
+            <div class="services-item" data-lang="item-3">Венки</div>
         </div>
     </section>
 
     <section id="map">
-        <h2>Наше местоположение</h2>
-        <p>Адрес: г. Беслан, ул. Сигова, 10 | Телефон: +7 (XXX) XXX-XX-XX (Круглосуточно)</p>
+        <h2 data-lang="location-title">Наше местоположение</h2>
+        <p data-lang="address">Адрес: г. Беслан, ул. Сигова, 10 | Телефон: +7 (XXX) XXX-XX-XX (Круглосуточно)</p>
         <div class="map-container">
             <iframe src="https://yandex.ru/map-widget/v1/?ll=44.547967%2C43.193773&z=16&pt=44.547967%2C43.193773,pm2rdm" width="100%" height="100%" frameborder="0" allowfullscreen="true"></iframe>
         </div>
     </section>
-
 </div>
 
 <footer>
-    &copy; 2010-2026 Ритуальная служба. Все права защищены.
+    &copy; 2010-2026 <span data-lang="site-title">Ритуальная служба</span>. Все права защищены.
 </footer>
+
+<script src="translations.js"></script>
+<script>
+function setLanguage(lang) {
+    localStorage.setItem('selectedLang', lang);
+
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (translations[lang] && translations[lang][key]) {
+            // Используем innerHTML чтобы сохранить теги <b> и переносы
+            element.innerHTML = translations[lang][key];
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLang') || 'ru';
+    setLanguage(savedLang);
+});
+</script>
 
 </body>
 </html>
